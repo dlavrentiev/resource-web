@@ -35,15 +35,6 @@ header {
 	color:white;
 }
 
-.rect .amani-content {
-	opacity:0;
-	transition:opacity 0.3s;
-}
-
-.rect:hover .amani-content {
-	opacity:1;
-}
-
 .clicked {
 	background:green;
 }
@@ -107,3 +98,47 @@ header {
 .tab2, .folder2  { background:hsl(0, 100%, 30%); }
 .tab3, .folder3  { background:hsl(0, 100%, 15%); }
 .tab4, .folder4  { background:hsl(0, 100%, 0%); }
+
+/* Accordion styles */
+.accordion {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	color: white;
+  }
+  
+  .tab {
+	padding: 1em;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	font-weight: bold;
+	background-color: hsl(0, 100%, 50%);
+	cursor: pointer;
+  }
+  
+  .panel {
+	display: none;
+	padding: 0 1em;
+  }
+  
+  .card {
+	background-color: hsl(0, 100%, 30%);
+	padding: 1em;
+	margin-bottom: 1em;
+  }
+  
+  /* Show panel when corresponding tab is clicked */
+  .tab.active {
+	background-color: hsl(0, 100%, 70%);
+  }
+  
+  .panel.active {
+	display: block;
+  }
+  
+  /* Folder background color for each tab */
+  .tab.friends, .panel.friends .card { background-color: hsl(0, 100%, 50%); }
+  .tab.homes, .panel.homes .card { background-color: hsl(0, 100%, 30%); }
+  .tab.work, .panel.work .card { background-color: hsl(0, 100%, 15%); }
+  .tab.letters, .panel.letters .card { background-color: hsl(0, 100%, 0%); }
+  

@@ -30,3 +30,27 @@ $(".tab4").click(function(){
 //     folderClass = ".folder" + $(this).attr("class").replace("tab tab","");    
 //     $(folderClass).css({"z-index":1})
 // })
+
+// Get all accordion tabs and panels
+const tabs = document.querySelectorAll('.accordion .tab');
+const panels = document.querySelectorAll('.accordion .panel');
+
+// Add click event listener to each tab
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Toggle active class on clicked tab
+    tab.classList.toggle('active');
+    
+    // Toggle active class on corresponding panel
+    const panel = tab.nextElementSibling;
+    panel.classList.toggle('active');
+    
+    // Hide all other panels
+    panels.forEach(p => {
+      if (p !== panel) {
+        p.classList.remove('active');
+        p.previousElementSibling.classList.remove('active');
+      }
+    });
+  });
+});
