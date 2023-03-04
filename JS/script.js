@@ -1,25 +1,34 @@
+window.onscroll = function() {resizeHeader()};
+   function resizeHeader() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+         document.querySelector(".header").style.fontSize = "50px";
+      } else {
+         document.querySelector(".header").style.fontSize = "100px";
+      }
+   }
+
 // THIS IS FOR DIMA...
  // BELOW IS THE BRUTE FORCE METHOD
  // AFTER THAT IS THE SIMPLER BUT MORE TECHNICAL METHOD TO DO THE SAME THING
 
- $(".tab1").click(function(){
-  $(".folder2, .folder3, .folder4").css({"z-index":0})
-  $(".folder1").css({"z-index":1})
+  $(".tab1").click(function(){
+  $(".folder2, .folder3, .folder4").css({"z-index":2})
+  $(".folder1").css({"z-index":3})
 })
 
 $(".tab2").click(function(){
-  $(".folder1, .folder3, .folder4").css({"z-index":0})
-  $(".folder2").css({"z-index":1})
+  $(".folder1, .folder3, .folder4").css({"z-index":2})
+  $(".folder2").css({"z-index":3})
 })
 
 $(".tab3").click(function(){
-  $(".folder1, .folder2, .folder4").css({"z-index":0})
-  $(".folder3").css({"z-index":1})
+  $(".folder1, .folder2, .folder4").css({"z-index":2})
+  $(".folder3").css({"z-index":3})
 })
 
 $(".tab4").click(function(){
-  $(".folder1, .folder2, .folder3").css({"z-index":0})
-  $(".folder4").css({"z-index":1})
+  $(".folder1, .folder2, .folder3").css({"z-index":2})
+  $(".folder4").css({"z-index":3})
 })
 
 
@@ -31,26 +40,32 @@ $(".tab4").click(function(){
 //     $(folderClass).css({"z-index":1})
 // })
 
-// Get all accordion tabs and panels
-const tabs = document.querySelectorAll('.accordion .tab');
-const panels = document.querySelectorAll('.accordion .panel');
+window.onload = function() {
+  // Hide all category contents by default
+  var categorycontent = document.getElementsByClassName("categorycontent");
+  for (var i = 0; i < categorycontent.length; i++) {
+    categorycontent[i].style.display = "none";
+  }
+};
 
-// Add click event listener to each tab
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    // Toggle active class on clicked tab
-    tab.classList.toggle('active');
-    
-    // Toggle active class on corresponding panel
-    const panel = tab.nextElementSibling;
-    panel.classList.toggle('active');
-    
-    // Hide all other panels
-    panels.forEach(p => {
-      if (p !== panel) {
-        p.classList.remove('active');
-        p.previousElementSibling.classList.remove('active');
-      }
-    });
-  });
-});
+
+function openHandle(evt, handleName) {
+  // Declare all variables
+  var i, categorycontent, categorylinks;
+
+  // Get all elements with class="categorycontent" and hide them
+  categorycontent = document.getElementsByClassName("categorycontent");
+  for (i = 0; i < categorycontent.length; i++) {
+    categorycontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="categorylinks" and remove the class "active"
+  categorylinks = document.getElementsByClassName("categorylinks");
+  for (i = 0; i < categorylinks.length; i++) {
+    categorylinks[i].className = categorylinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(handleName).style.display = "block";
+  evt.currentTarget.className += " active";
+}

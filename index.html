@@ -1,67 +1,89 @@
 <!DOCTYPE html>
  <html lang="en">
  <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="CSS/main.css">
-     <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <title>true north and gay</title>
  </head>
  <body>
+	
+	
+	<div class="header">
+		<div class="header-title">true north and gay</div>
+		<div class="header-subtitle">classified ads from The Body Politic (1971-1987)</div>
+	</div>
+	  
+
 
          <div id="tabs">
 
-             <div class="tab tab1">1977</div>
-             <div class="tab tab2">1978</div>
-             <div class="tab tab3">1979</div>
-             <div class="tab tab4">1980</div>
+             <div class="tab tab1">1971</div>
+             <div class="tab tab2">1972</div>
+             <div class="tab tab3">1973</div>
+             <div class="tab tab4">1974</div>
          </div>
 
          <div id="folders">
-			<div class="folder folder1"></div>
-			<div class="folder folder2"></div>
-			<div class="folder folder3"></div>
-			<div class="folder folder4">
-			  <div class="accordion">
-				<div class="tab friends">Friends</div>
-				<div class="panel">
-				  <div class="card">Card 1</div>
-				  <div class="card">Card 2</div>
-				  <div class="card">Card 3</div>
-				  <div class="card">Card 4</div>
-				</div>
-				<div class="tab homes">Homes</div>
-				<div class="panel">
-				  <div class="card">Card 1</div>
-				  <div class="card">Card 2</div>
-				  <div class="card">Card 3</div>
-				  <div class="card">Card 4</div>
-				</div>
-				<div class="tab work">Work</div>
-				<div class="panel">
-				  <div class="card">Card 1</div>
-				  <div class="card">Card 2</div>
-				  <div class="card">Card 3</div>
-				  <div class="card">Card 4</div>
-				</div>
-				<div class="tab letters">Letters</div>
-				<div class="panel">
-				  <div class="card">Card 1</div>
-				  <div class="card">Card 2</div>
-				  <div class="card">Card 3</div>
-				  <div class="card">Card 4</div>
-				</div>
-				<div class="tab other">Other</div>
-				<div class="panel">
-				  <div class="card">Card 1</div>
-				  <div class="card">Card 2</div>
-				  <div class="card">Card 3</div>
-				  <div class="card">Card 4</div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		  
+
+             <div class="folder folder1">
+				<div class="category">
+					<button class="categorylinks" onclick="openHandle(event, 'Friends')">Friends</button>
+					<button class="categorylinks" onclick="openHandle(event, 'Homes')">Homes</button>
+					<button class="categorylinks" onclick="openHandle(event, 'Work')">Work</button>
+					<button class="categorylinks" onclick="openHandle(event, 'Letters')">Letters</button>
+					<button class="categorylinks" onclick="openHandle(event, 'Other')">Other</button>
+				  </div>
+				  
+				  <div id="Friends" class="categorycontent">
+					<h3>Friends</h3>
+					<p>
+					Young (23) submissive gay (Fr. act./grk pas.) seeks dominant, hardbuilt, mean-mouthed leather/levi dude (25-37) for training in w/s, bottom worship, related activities. Prefer beard and moustache. Be mean-- command me in writing. Lusty photo appreciated.
+					Rm. 1206, Stong Res., York U., 4700 Keele, Downsview, Ontario M3J 2R3.
+					</p>
+
+					<p>
+					Young Englishman downtown. Interests theatre, travel, wishes to meet similar with view to possible (not definite) permanent relationship. 
+					Box 1054. Station A, Toronto.						
+					</p>
+				  </div>
+				  
+				  <div id="Homes" class="categorycontent">
+					<h3>Homes</h3>
+					<p>Homes.</p> 
+				  </div>
+				  
+				  <div id="Work" class="categorycontent">
+					<h3>Work</h3>
+					<p>Work.</p>
+				  </div>
+
+				  <div id="Letters" class="categorycontent">
+					<h3>Letters</h3>
+					<p>Letters.</p>
+				  </div>
+
+				  <div id="Other" class="categorycontent">
+					<h3>Other</h3>
+					<p>Other.</p>
+				  </div>
+
+             </div>
+
+             <div class="folder folder2">
+             </div>
+
+             <div class="folder folder3">
+             </div>
+
+             <div class="folder folder4">
+             </div>
+
+         </div>
          <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
          <script src="JS/script.js"></script>
      </body>

@@ -1,20 +1,43 @@
-* {
+body {
+	font-family:'Gill Sans', sans-serif;
+}
+
+
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: rgb(52, 21, 110);
+	color: white;
+	padding: 50px;
+	transition: 0.8s;
+  }
+  
+  .header-title {
+	font-size: 100px;
+	margin-bottom: 20px;
+	font-weight: 300px;
+	font-family: 'Comfortaa', cursive;
+  }
+  
+  .header-subtitle {
+	font-size: 40px;
+	font-weight: lighter;
+	font-family:'Gill Sans', sans-serif;
+  }  
+ 
+ * {
 	padding:0;
 	margin:0;
 	box-sizing: border-box;
 }
 
 body {
+	height:auto;
+	overflow: hidden;
 	font-size:20px;
-}
-
-header {
-	background: red;
-	width:100%;
-	height:50px;
-	position:fixed;
-	top:0;
-
+	font-weight: lighter;
+	font-family:'Gill Sans', sans-serif;
 }
 
 .grid-container {
@@ -26,14 +49,6 @@ header {
 
 }
 
-.rect {
-	background:blue;
-	width:100%; 
-	height:250px;
-	margin:auto;
-	padding:1em;
-	color:white;
-}
 
 .clicked {
 	background:green;
@@ -52,11 +67,11 @@ header {
 
 /* THIS IS THE CONTAINER FOR ALL THE FOLDER TABS */
 #tabs {
-	display:grid;
-	grid-template-columns:repeat(4, 1fr);
-	color:white;
-}
-
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	color: white;
+	margin-top: 300px; /* add this line */
+  }
 
 	.tab {    
 		padding:1em;
@@ -70,7 +85,6 @@ header {
 	position:relative;
 	width:100vw;
 	color:white;
-
 
 }
 
@@ -90,55 +104,73 @@ header {
 
 }
 
-
-
-
 /* THIS DETERMINES THE BACKGROUND COLOR OF EACH FOLDER AND EACH TAB */
 .tab1, .folder1  { background:hsl(0, 100%, 50%); }
 .tab2, .folder2  { background:hsl(0, 100%, 30%); }
 .tab3, .folder3  { background:hsl(0, 100%, 15%); }
 .tab4, .folder4  { background:hsl(0, 100%, 0%); }
 
-/* Accordion styles */
-.accordion {
-	display: flex;
-	flex-direction: column;
-	margin-top: 20px;
-	color: white;
-  }
+
+.folder1 {
+	z-index:10;
+}
+* {box-sizing: border-box}
+
+/* Style the category */
+.category {
+  float: left;
+  /* border: 1px solid #ccc;
+  background-color: #f1f1f1; */
   
-  .tab {
-	padding: 1em;
-	border-top-left-radius: 40px;
-	border-top-right-radius: 40px;
-	font-weight: bold;
-	background-color: hsl(0, 100%, 50%);
-	cursor: pointer;
-  }
+  width: 25%;
+  height: 400px;
+  z-index:1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.category button {
+  display: block;
+  background-color: inherit;
+  color:white;
+  font-weight:bold;
+  font-family:'Gill Sans', sans-serif;
   
-  .panel {
-	display: none;
-	padding: 0 1em;
-  }
-  
-  .card {
-	background-color: hsl(0, 100%, 30%);
-	padding: 1em;
-	margin-bottom: 1em;
-  }
-  
-  /* Show panel when corresponding tab is clicked */
-  .tab.active {
-	background-color: hsl(0, 100%, 70%);
-  }
-  
-  .panel.active {
-	display: block;
-  }
-  
-  /* Folder background color for each tab */
-  .tab.friends, .panel.friends .card { background-color: hsl(0, 100%, 50%); }
-  .tab.homes, .panel.homes .card { background-color: hsl(0, 100%, 30%); }
-  .tab.work, .panel.work .card { background-color: hsl(0, 100%, 15%); }
-  .tab.letters, .panel.letters .card { background-color: hsl(0, 100%, 0%); }
-  
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  border-bottom:1px solid #FFF; 
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.category button:hover {
+  background-color: #FFF;
+  color:red;
+}
+
+/* Create an active/current "category button" class */
+.category button.active {
+  background-color: #ccc;
+}
+
+/* Style the category content */
+.categorycontent {
+  float: left;
+  padding: 1em;
+  border: 1px solid #ccc;
+  width: 75%;
+  border-left: none;
+  height: 300px;
+  z-index:1;
+}
+
+h3 {
+	margin-bottom:1rem;
+}
+
+p {
+	margin-bottom:1em;
+}
