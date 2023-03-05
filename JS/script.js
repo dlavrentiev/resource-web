@@ -1,11 +1,33 @@
-window.onscroll = function() {resizeHeader()};
-   function resizeHeader() {
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-         document.querySelector(".header").style.fontSize = "50px";
-      } else {
-         document.querySelector(".header").style.fontSize = "100px";
-      }
-   }
+// When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.fontSize = "30px";
+    document.getElementById("header").innerHTML = "true north and gay";
+  } else {
+    document.getElementById("header").style.fontSize = "75px";
+    document.getElementById("header").innerHTML = "true north<br>and gay";
+  }
+}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("title").style.fontSize = "30px";
+    document.getElementById("subtitle").style.fontSize = "12px";
+    document.getElementById("title").style.float = "left";
+    document.getElementById("subtitle").style.float = "right";
+    document.getElementById("subtitle").style.clear = "none";
+  } else {
+    document.getElementById("title").style.fontSize = "75px";
+    document.getElementById("subtitle").style.fontSize = "30px";
+    document.getElementById("title").style.float = "left";
+    document.getElementById("subtitle").style.float = "left";
+    document.getElementById("subtitle").style.clear = "left";
+  }
+}
 
 // THIS IS FOR DIMA...
  // BELOW IS THE BRUTE FORCE METHOD
@@ -69,3 +91,11 @@ function openHandle(evt, handleName) {
   document.getElementById(handleName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+// Select cards
+const card = document.querySelectorAll('.card');
+
+//Loop through and add margin top to see titles
+card.forEach(c => {
+  c.style.top = c.dataset.top * 60 + "px";
+});
