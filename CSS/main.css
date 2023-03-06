@@ -1,31 +1,10 @@
-/* .header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	padding: 20px;
-  }
-  
-  .header-title {
-	font-size: 75px;
-	margin-bottom: 20px;
-	font-weight: 400px;
-	color: #3255A4;
-	font-family: 'Comfortaa';
-  }
-  
-  .header-subtitle {
-	font-size: 30px;
-	font-weight: 300;
-	font-family: 'Asap', sans-serif;
-  }   */
   #header {
-	background-color: #f1f1f1; /* Grey background */
+	background-image: url("file:///Users/dima/Library/CloudStorage/OneDrive-Personal/Documents/1%20Winter23/Graphic%20Design%202/Assignment%202/Resource%20Web/images/angels.jpg");
+	background-size: cover; /* Cover the entire header with the image */
 	padding: 50px 10px; /* Some padding */
 	color: #3255A4;
-	font-family: 'Comfortaa';
 	text-align: left;
 	font-size: 75px; /* Big font size */ 
-	font-weight: 400px; 
 	position: fixed; /* Fixed position - sit on top of the page */
 	top: 0; 
 	width: 100%; /* Full width */
@@ -33,12 +12,18 @@
   }
   
   #title {
+	font-family: 'Comfortaa';
+	color: #3255A4;
+	font-weight: 400px; 
 	font-size: 75px;
 	float: left;
   }
   
   #subtitle {
+	font-family: 'Asap';
+	color: black;
 	font-size: 30px;
+	font-weight: 300px;
 	float: left;
 	clear: left;
   }  
@@ -79,7 +64,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	color: black;
-	margin-top: 300px; /* add this line */
+	margin-top: 350px; /* add this line */
   }
 
 	.tab {    
@@ -195,11 +180,13 @@ body {
 }
 
 .card {
+	display: flex;
+	align-items: flex-start;
 	background: #FBF8F4;
 	color: black;
 	border-radius: 4px;
 	border:1px solid black; 
-	width: 400px;
+	width: 475px;
 	height: auto;
 	margin: 10px auto;
 	padding: 10px;
@@ -212,3 +199,48 @@ body {
 	height: 250px;
 	background: transparent;
 }
+
+.issue-number {
+	border-bottom:1px solid black;
+	font-size: 20px;
+	font-weight: medium;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.card img {
+	width: 90px;
+	margin-top: 30px;
+	margin-right: 20px;
+}
+
+.label {
+	margin-top: 10px;
+	padding: 5px 10px;
+	background-color: #3255A4;
+	border-radius: 15px;
+	border:1px solid black; 
+	color:#FBF8F4;
+	font-size: 12px;
+	margin-right: 10px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	background-image: url(file:///Users/dima/Library/CloudStorage/OneDrive-Personal/Documents/1%20Winter23/Graphic%20Design%202/Assignment%202/Resource%20Web/images/sebastian.jpg);
+    background-size: cover;
+    color: #FBF8F4;
+	display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 100px 10px;
+  }
+  
+  .footer a {
+    color: #FBF8F4;
+    text-decoration: underline;
+  }

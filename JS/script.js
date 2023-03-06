@@ -1,31 +1,20 @@
 // When the user scrolls down 50px from the top of the document, resize the header's font size
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("header").style.fontSize = "30px";
-    document.getElementById("header").innerHTML = "true north and gay";
-  } else {
-    document.getElementById("header").style.fontSize = "75px";
-    document.getElementById("header").innerHTML = "true north<br>and gay";
-  }
-}
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("title").style.fontSize = "30px";
-    document.getElementById("subtitle").style.fontSize = "12px";
-    document.getElementById("title").style.float = "left";
-    document.getElementById("subtitle").style.float = "right";
-    document.getElementById("subtitle").style.clear = "none";
+    document.getElementById("title").style.fontSize = "35px";
+    document.getElementById("subtitle").style.fontSize = "15px";
+    // document.getElementById("title").style.float = "left";
+    // document.getElementById("subtitle").style.float = "centre";
+    // document.getElementById("subtitle").style.clear = "none";
   } else {
     document.getElementById("title").style.fontSize = "75px";
     document.getElementById("subtitle").style.fontSize = "30px";
-    document.getElementById("title").style.float = "left";
-    document.getElementById("subtitle").style.float = "left";
-    document.getElementById("subtitle").style.clear = "left";
+    // document.getElementById("title").style.float = "left";
+    // document.getElementById("subtitle").style.float = "left";
+    // document.getElementById("subtitle").style.clear = "left";
   }
 }
 
