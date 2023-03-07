@@ -1,5 +1,6 @@
   #header {
-	background-image: url("file:///Users/dima/Library/CloudStorage/OneDrive-Personal/Documents/1%20Winter23/Graphic%20Design%202/Assignment%202/Resource%20Web/images/kiss.jpg");
+	background-image: url(images/kiss.jpg);
+	background-repeat: no-repeat;
 	background-size: cover; /* Cover the entire header with the image */
 	padding: 10px 10px; /* Some padding */
 	color: #3255A4;
