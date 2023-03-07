@@ -4,7 +4,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("title").style.fontSize = "45px";
+    document.getElementById("title").style.fontSize = "55px";
     document.getElementById("subtitle").style.fontSize = "15px";
     // document.getElementById("title").style.float = "left";
     // document.getElementById("subtitle").style.float = "centre";
