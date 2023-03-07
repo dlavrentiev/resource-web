@@ -1,28 +1,32 @@
   #header {
-	background-image: url("file:///Users/dima/Library/CloudStorage/OneDrive-Personal/Documents/1%20Winter23/Graphic%20Design%202/Assignment%202/Resource%20Web/images/angels.jpg");
+	background-image: url("file:///Users/dima/Library/CloudStorage/OneDrive-Personal/Documents/1%20Winter23/Graphic%20Design%202/Assignment%202/Resource%20Web/images/kiss.jpg");
 	background-size: cover; /* Cover the entire header with the image */
-	padding: 50px 10px; /* Some padding */
+	padding: 10px 10px; /* Some padding */
 	color: #3255A4;
 	text-align: left;
-	font-size: 75px; /* Big font size */ 
 	position: fixed; /* Fixed position - sit on top of the page */
 	top: 0; 
 	width: 100%; /* Full width */
+	border-bottom: 1.25px solid #192b52; 
 	transition: 0.3s; /* Add a transition effect (when scrolling - and font size is decreased) */
   }
   
   #title {
-	font-family: 'Comfortaa';
+	font-family: sofia-pro-soft, sans-serif;
+	font-weight: 700;
+	font-style: normal;
 	color: #3255A4;
-	font-weight: 400px; 
-	font-size: 75px;
+	font-size: 90px;
 	float: left;
+	letter-spacing: -0.025em;
+	line-height: 0.90em;
   }
   
   #subtitle {
+	margin-top: 1em;
 	font-family: 'Asap';
-	color: black;
-	font-size: 30px;
+	color: #192b52;
+	font-size: 25px;
 	font-weight: 300px;
 	float: left;
 	clear: left;
@@ -63,7 +67,7 @@ body {
 #tabs {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	color: black;
+	color: #FBF8F4;
 	margin-top: 350px; /* add this line */
   }
 
@@ -71,7 +75,6 @@ body {
 		padding:1em;
 		border-top-left-radius:40px;
 		border-top-right-radius:40px;
-		border-top:1px solid black;
 		font-size: 20px;   
 		font-weight:bold;
 	}
@@ -101,7 +104,7 @@ body {
 }
 
 /* THIS DETERMINES THE BACKGROUND COLOR OF EACH FOLDER AND EACH TAB */
-.tab1, .folder1  { background:rgb(225, 90, 25); }
+.tab1, .folder1  { background:#e15a19; }
 .tab2, .folder2  { background:rgb(220, 70, 0); }
 .tab3, .folder3  { background:rgb(195, 60, 0); }
 .tab4, .folder4  { background:rgb(175, 55, 0); }
@@ -134,7 +137,7 @@ body {
   padding: 22px 16px;
   width: 100%;
   border: none;
-  border-bottom:1px solid black; 
+  border-bottom:1px solid #192b52; 
   outline: none;
   text-align: left;
   cursor: pointer;
@@ -142,9 +145,10 @@ body {
 }
 
 /* Change background color of buttons on hover */
-.category button:hover {
+.category button:hover,
+.category button.whatWeClickedOn {
   background-color: #FBF8F4;
-  color: black;
+  color: #192b52;
 }
 
 /* Create an active/current "category button" class */
@@ -183,9 +187,9 @@ body {
 	display: flex;
 	align-items: flex-start;
 	background: #FBF8F4;
-	color: black;
+	color: #192b52;
 	border-radius: 4px;
-	border:1px solid black; 
+	border:1px solid #192b52; 
 	width: 475px;
 	height: auto;
 	margin: 10px auto;
@@ -201,7 +205,7 @@ body {
 }
 
 .issue-number {
-	border-bottom:1px solid black;
+	border-bottom:1px solid #192b52;
 	font-size: 20px;
 	font-weight: medium;
 	position: absolute;
@@ -218,9 +222,8 @@ body {
 .label {
 	margin-top: 10px;
 	padding: 5px 10px;
-	background-color: #3255A4;
+	background-color: #5b77b6;
 	border-radius: 15px;
-	border:1px solid black; 
 	color:#FBF8F4;
 	font-size: 12px;
 	margin-right: 10px;
@@ -231,8 +234,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-	background-image: url(file:///Users/dima/Library/CloudStorage/OneDrive-Personal/Documents/1%20Winter23/Graphic%20Design%202/Assignment%202/Resource%20Web/images/sebastian.jpg);
-    background-size: cover;
+	background-color: #3255A4;
     color: #FBF8F4;
 	display: flex;
     justify-content: space-between;
@@ -243,4 +245,9 @@ body {
   .footer a {
     color: #FBF8F4;
     text-decoration: underline;
+  }
+
+
+  .categorycontent {
+	display:none;
   }
